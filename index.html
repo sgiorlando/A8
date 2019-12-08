@@ -1,0 +1,94 @@
+<!--
+    FILE: /~sgiorlan/sgiorlan_assign8.html
+    91.61 GUI Programming I Assignment No.8: Using the jQuery UI Slider and Tab Widgets
+    Scott T. Giorlando, UMass Lowell Computer Science, scott_giorlando@student.uml.edu
+    File Created on: 12/6/2019 12:20 PM.
+        Updated by STG on 12/8/2019 4:45 PM
+
+    File Description: This file is a webpage that shows the user a form where they can enter
+    a range of numbers.  Once they enter the numbers a multiplication table is created from the beginning
+    of their range to the end of their range specified.  This table is also limited in range, and does not allow
+    the user to enter any type of letters or symbols that are not represented as letters.
+
+    This file was updated to include a slider that the user can use to have their numbers be in a specific range.
+
+    This file did pass all the validators that need to be used.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Interactive Multiplication Table</title>
+    <link rel="stylesheet" href="css/hw8stylesheet.css">
+    <!--
+      I included CDN's for jQuery for both the regular jQuery and the validation plugin.
+      All of these links are the ones listed on the assignment page.
+    -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div id="input">
+      <h1 id="header">Interactive Multiplication Table</h1>
+      <!--
+      In this div I have a form that will take in user input which is a starting number and an ending number for two separte inputs,
+      a multiplier and a multiplicand.
+      -->
+      <form id="userForm" name="userForm">
+        <label for="firstMultiplier">Starting Number (Multiplier)</label>
+        <input type="number" name="firstMultiplier" id="firstMultiplier" placeholder="Any positive number">
+        <div id="fMultiplierSlider" class="slider">
+        </div>
+        <label for="firstMultiplier">Ending Number (Multiplier)</label>
+        <input type="number" name="lastMultiplier" id="lastMultiplier" placeholder="Number greater than beginning">
+        <div id="lMultiplierSlider" class="slider">
+        </div>
+        <label for="firstMultiplier">Beginning Number (Multiplicand)</label>
+        <input type="number" name="firstMultiplicand" id="firstMultiplicand" placeholder="Any positive number">
+        <div id="fMultiplicandSlider" class="slider">
+        </div>
+        <label for="firstMultiplier">Ending Number (Multiplicand)</label>
+        <input type="number" name="lastMultiplicand" id="lastMultiplicand" placeholder="Number greater than beginning">
+        <div id="lMultiplicandSlider" class="slider">
+        </div>
+        <input type="submit" value="Save Table" id="save">
+        <div id="userSubmission">
+        <!--
+         Message area for input errors and output ranges
+         -->
+        </div>
+      </form>
+      <div id="tableTab">
+        <ul id="tabList">
+          <li><a href="#default">Tables:</a></li>
+        </ul>
+        <div id="default">
+          <div id="output">
+            <!--
+            Output section for the table
+            -->
+            <table id=tOutput>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="output">
+      <!--
+      Output section for the table
+      -->
+      <table id=tOutput>
+      </table>
+    </div>
+    <br>
+    <label>Tab number to delete (Starts at 1):</label>
+    <input for="indexValue" id="indexValue"><p>
+    <button type="button" id="removeTabs">Remove Tab</button>
+    <button type="button" id="removeAllTabs">Remove All Tabs</button>
+    <script src="js/hw8script.js"></script>
+  </body>
+</html>
