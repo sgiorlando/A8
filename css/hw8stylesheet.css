@@ -1,0 +1,111 @@
+/*
+    FILE: /~sgiorlan/Assignment7/css/hw7stylesheet.css
+    91.61 GUI Programming I Assignment No.8: Using the jQuery UI Slider and Tab Widgets
+    Scott T. Giorlando, UMass Lowell Computer Science, scott_giorlando@student.uml.edu
+    File Created on: 12/8/2019 5:15 PM.
+
+    File Description: This file is a stylesheet for my website that I made changes to.
+    This specific file is meant to hold the changes that can be seen when the link is clicked on.
+    Most of the information used on the assignment was on W3schools or in previous work I've done in the class, mostly in my exercises.
+
+    This file did pass the validator given in previous assignments.
+*/
+
+/*
+For my body I went online and found a RGB color picker website and found a shade of blue I felt was good to look at.  I made that my background color, much like what I did for
+my assignment 4.
+The rest of the body is essentially changing the format of all the text seen on the webpage.  I added spcacing, padding different margins a new font and different
+widths to the screen so it looks nice.
+
+Note: Not much has changed on this file since assignment 6 as alot of css can be changed with jQuery and JavaScript.
+*/
+
+body {
+  background-color: #7DD4FF;
+  font-size: 90%;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.15em;
+  min-width: 720px;
+  max-width: 1080px;
+  padding: 20px;
+  margin: auto;
+}
+
+/*
+My header uses a gray background color and has center alignment with some padding modifications.
+I also gave it a solid black border.
+*/
+h1 {
+  overflow: hidden;
+  background-color: #B0B0B0;
+  padding: 20px 10px;
+  text-align: center;
+  border: 4px solid black;
+}
+
+h2 {
+  color: red;
+}
+
+h3 {
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 4px;
+  border: 1px solid black;
+}
+
+/*
+My table has every even cell be a shade of gray like my header background color.
+Every odd cell is a darker shade of blue that might be changed later because it looks a little ugly.
+*/
+tr:nth-child(even) {
+  background-color: #B0B0B0;
+}
+
+tr:nth-child(odd) {
+  background-color: #559AFF;
+}
+/*
+When the user hovers over a specific cell of the table, it will change the color of the cell to a white.
+*/
+td:hover {
+  background-color: #FFFFFF;
+}
+/*
+Here I made my input a specific type, which will only take integers.  So the user cannot enter any type of letters or decimals into their submission.
+*/
+input[type = number] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+/*
+For my submit button I made it a bit larger and changed the text of the button.
+*/
+input[type = submit] {
+  display: block;
+  width: 25%;
+  padding: 14px 20px;
+  margin: 0 auto;
+  border: 3px #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#userSubmission {
+  overflow: hidden;
+  padding: 20px 10px;
+  text-align: center;
+}
